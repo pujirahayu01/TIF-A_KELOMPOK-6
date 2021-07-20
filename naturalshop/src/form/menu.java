@@ -2673,7 +2673,7 @@ public class menu extends javax.swing.JFrame {
         m.put("nonota", nofaktur);
         
         try {
-            JasperDesign jd = JRXmlLoader.load("D:\\Natural Shop\\naturalshop\\src\\report\\nota.jrxml");
+            JasperDesign jd = JRXmlLoader.load("src\\report\\nota.jrxml");
             JasperReport jr = JasperCompileManager.compileReport(jd);
             JasperPrint jp = JasperFillManager.fillReport(jr, m, conn);
             JasperViewer.viewReport(jp, false);
@@ -2800,9 +2800,8 @@ public class menu extends javax.swing.JFrame {
     private void btnPenjualan1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPenjualan1MouseClicked
         // TODO add your handling code here:
         try {
-            String file = "D:\\Natural Shop\\naturalshop\\src\\report\\reportBarang.jrxml";
-            JasperReport jr = JasperCompileManager.compileReport(file);
-            JasperPrint jp = JasperFillManager.fillReport(jr, null, conn);
+            String file = "src/report/reportBarang.jasper";
+            JasperPrint jp = JasperFillManager.fillReport(file, null, conn);
             JasperViewer.viewReport(jp, false);
         } catch (JRException ex) {
             JOptionPane.showMessageDialog(null, ex);
