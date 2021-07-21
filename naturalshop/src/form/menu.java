@@ -3031,7 +3031,7 @@ public class menu extends javax.swing.JFrame {
             if ("MAX(no_faktur)" == null){
                 txtNoFaktur.setText("F00001");
             } else {
-                long id = Long.parseLong(rs.getString("MAX(no_faktur)").substring(2, rs.getString("MAX(no_faktur)").length()));
+                long id = Long.parseLong(rs.getString("MAX(no_faktur)").substring(2));
                 id++;
                 txtNoFaktur.setText("F" + String.format("%05d", id));
             }
