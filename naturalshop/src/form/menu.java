@@ -185,6 +185,7 @@ public class menu extends javax.swing.JFrame {
         btnHAPUS = new javax.swing.JButton();
         btnEDIT = new javax.swing.JButton();
         btnTAMBAH = new javax.swing.JButton();
+        btnHAPUS1 = new javax.swing.JButton();
         jPanel17 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
         jLabel8 = new javax.swing.JLabel();
         supplierPanel = new javax.swing.JPanel();
@@ -1188,7 +1189,7 @@ public class menu extends javax.swing.JFrame {
         btnEDIT.setBackground(new java.awt.Color(0, 139, 128));
         btnEDIT.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
         btnEDIT.setForeground(new java.awt.Color(255, 255, 255));
-        btnEDIT.setText("Edit");
+        btnEDIT.setText("Update");
         btnEDIT.setBorderPainted(false);
         btnEDIT.setFocusPainted(false);
         btnEDIT.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1204,7 +1205,7 @@ public class menu extends javax.swing.JFrame {
         btnTAMBAH.setBackground(new java.awt.Color(0, 139, 128));
         btnTAMBAH.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
         btnTAMBAH.setForeground(new java.awt.Color(255, 255, 255));
-        btnTAMBAH.setText("Tambah");
+        btnTAMBAH.setText("Simpan");
         btnTAMBAH.setBorderPainted(false);
         btnTAMBAH.setFocusPainted(false);
         btnTAMBAH.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1217,18 +1218,36 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
+        btnHAPUS1.setBackground(new java.awt.Color(0, 139, 128));
+        btnHAPUS1.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
+        btnHAPUS1.setForeground(new java.awt.Color(255, 255, 255));
+        btnHAPUS1.setText("Clear");
+        btnHAPUS1.setBorderPainted(false);
+        btnHAPUS1.setFocusPainted(false);
+        btnHAPUS1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHAPUS1.setOpaque(false);
+        btnHAPUS1.setRequestFocusEnabled(false);
+        btnHAPUS1.setRolloverEnabled(false);
+        btnHAPUS1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHAPUS1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel22Layout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(btnHAPUS1, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnHAPUS, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnEDIT, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnTAMBAH, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1237,12 +1256,13 @@ public class menu extends javax.swing.JFrame {
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnHAPUS, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEDIT, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTAMBAH, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnTAMBAH, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHAPUS1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         barangPanel.add(jPanel22);
-        jPanel22.setBounds(760, 820, 470, 50);
+        jPanel22.setBounds(660, 820, 570, 50);
 
         jPanel17.setBackground(new java.awt.Color(241, 245, 246));
 
@@ -1667,7 +1687,9 @@ public class menu extends javax.swing.JFrame {
         txtKembalian.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
 
         txtTotal.setBackground(new java.awt.Color(0, 139, 128));
-        txtTotal.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
+        txtTotal.setFont(new java.awt.Font("STXihei", 0, 48)); // NOI18N
+        txtTotal.setForeground(new java.awt.Color(255, 255, 255));
+        txtTotal.setText("123123123");
         txtTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalActionPerformed(evt);
@@ -1926,7 +1948,7 @@ public class menu extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(241, 245, 246));
 
         txtTotal1.setBackground(new java.awt.Color(0, 139, 128));
-        txtTotal1.setFont(new java.awt.Font("STXihei", 0, 36)); // NOI18N
+        txtTotal1.setFont(new java.awt.Font("STXihei", 0, 48)); // NOI18N
         txtTotal1.setForeground(new java.awt.Color(255, 255, 255));
         txtTotal1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2130,16 +2152,22 @@ public class menu extends javax.swing.JFrame {
         //main.add(aboutPanel);
 //        main.repaint();
 //        main.revalidate();
-        btnAbout.setBackground(new java.awt.Color(255,255,255));
-        lblAbout.setForeground(new java.awt.Color(0, 139, 128));
-        btnHome.setBackground(new java.awt.Color(0, 139, 128));
-        lblHome.setForeground(new java.awt.Color(255,255,255));
-        btnLaporan.setBackground(new java.awt.Color(0, 139, 128));
-        lblLaporan.setForeground(new java.awt.Color(255,255,255));
-        btnAdmin.setBackground(new java.awt.Color(0, 139, 128));
-        lblAdmin.setForeground(new java.awt.Color(255,255,255));
-//        JOptionPane.showMessageDialog(null, " APLIKASI INI DI BUAT OLEH KELOMPOK 6" + "\n" +
-//                                            " Dibuat pada tahun 2021 oleh Mahasiswa Polije");
+//        btnAbout.setBackground(new java.awt.Color(255,255,255));
+//        lblAbout.setForeground(new java.awt.Color(0, 139, 128));
+//        btnHome.setBackground(new java.awt.Color(0, 139, 128));
+//        lblHome.setForeground(new java.awt.Color(255,255,255));
+//        btnLaporan.setBackground(new java.awt.Color(0, 139, 128));
+//        lblLaporan.setForeground(new java.awt.Color(255,255,255));
+//        btnAdmin.setBackground(new java.awt.Color(0, 139, 128));
+//        lblAdmin.setForeground(new java.awt.Color(255,255,255));
+        JOptionPane.showMessageDialog(null, " APLIKASI INI DI BUAT OLEH KELOMPOK 6 \n \n"
+                                          + " 1. Athallah Ariella \n"
+                                          + " 2. Puji Rahayu \n"
+                                          + " 3. Rahadian Dewi Sarasnasifka \n"
+                                          + " 4. Noga Muktiwati \n"
+                                          + " 5. Adam Hafizh Abdillah \n"
+                                          + " 6. Wildan Asyrof Dewayana \n \n"
+                                          + " Dibuat pada tahun 2021 oleh Mahasiswa Polije");
     }//GEN-LAST:event_btnAboutMouseClicked
 
     private void btnAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminMouseClicked
@@ -2357,7 +2385,7 @@ public class menu extends javax.swing.JFrame {
         kode = kode_supplier.getText();
         namadepan = namaSPL_depan.getText();
         namabelakang = namaSPL_blk.getText();
-        alamat = Alamat.getText();
+        alamat = Alamat1.getText();
         nohp = no_hp.getText();
 
         try {
@@ -2390,7 +2418,7 @@ public class menu extends javax.swing.JFrame {
             + "' ,namaSPL_blk='" + namaSPL_blk.getText()
             + "' ,no_hp='" + no_hp.getText()
             + "'On Duplicate Key Update kode_supplier ='" + kode_supplier.getText() + "' ,namaSPL_depan='" + namaSPL_depan.getText()
-            + "' ,namaSPL_blk='" + namaSPL_blk.getText() + "' ,Alamat='" + Alamat.getText()
+            + "' ,namaSPL_blk='" + namaSPL_blk.getText() + "' ,Alamat='" + Alamat1.getText()
             + "' ,no_hp='" + no_hp.getText()+"'";
 
             java.sql.PreparedStatement pst = conn.prepareStatement(sql);
@@ -2436,7 +2464,7 @@ public class menu extends javax.swing.JFrame {
         namaSPL_blk.setText(namalengkp[1]);
 
         String Almt = Tb_Supplier.getValueAt(baris, 2).toString();
-        Alamat.setText(Almt);
+        Alamat1.setText(Almt);
 
         String nohp = Tb_Supplier.getValueAt(baris, 3).toString();
         no_hp.setText(nohp);
@@ -2540,8 +2568,13 @@ public class menu extends javax.swing.JFrame {
         String kdsupplier = txtKodeSupplier.getText();
         ResultSet rs = tb.supplier(kdsupplier);
         try {
-            rs.next();
-            txtNamaSupplier.setText(rs.getString("namaSPL_depan"));
+            if(rs.next()){
+                txtNamaSupplier.setText(rs.getString("namaSPL_depan"));
+            } else {
+                JOptionPane.showMessageDialog(null, "Supplier tidak ditemukan! \nSilahkan input data Supplier terlebih dahulu!");
+                txtNamaSupplier.setText("");
+            }
+            
         } catch (SQLException ex) {
             Logger.getLogger(menu.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2553,6 +2586,10 @@ public class menu extends javax.swing.JFrame {
 
     private void txtJumlah1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlah1ActionPerformed
         // TODO add your handling code here:
+        if("".equals(txtKodeBarang1.getText())){
+            JOptionPane.showMessageDialog(null, "Pilih barang terlebih dahulu!");
+            txtJumlah1.setText("");
+        } else {
         tblBeli = (DefaultTableModel) tblPembelian.getModel();
         int harga, jumlah;
         harga = Integer.parseInt(txtHargaBeli.getText());
@@ -2567,6 +2604,7 @@ public class menu extends javax.swing.JFrame {
         }
         txtTotal1.setText(""+tot_harga);
         clearjumlhbrg();
+        }
     }//GEN-LAST:event_txtJumlah1ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -2712,32 +2750,28 @@ public class menu extends javax.swing.JFrame {
 
     private void txtJumlahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahActionPerformed
         // TODO add your handling code here:
-        tblJual = (DefaultTableModel) tblPenjualan.getModel();
-        int harga, jumlah;
-        harga = Integer.parseInt(txtHarga.getText());
-        jumlah = Integer.parseInt(txtJumlah.getText());
-        String subtotal = "" + harga*jumlah;
-        String kdbarang = txtKodeBarang.getText();
-        
-        tblJual.addRow(new Object[]{txtKodeBarang.getText(), boxNmBarang.getSelectedItem().toString(), txtHarga.getText(), txtJumlah.getText(), subtotal});
+        if("".equals(txtKodeBarang.getText())){
+            JOptionPane.showMessageDialog(null, "Pilih barang terlebih dahulu!");
+            txtJumlah.setText("");
+        } else {
+            tblJual = (DefaultTableModel) tblPenjualan.getModel();
+            int harga, jumlah;
+            harga = Integer.parseInt(txtHarga.getText());
+            jumlah = Integer.parseInt(txtJumlah.getText());
+            String subtotal = "" + harga*jumlah;
+            String kdbarang = txtKodeBarang.getText();
 
-        ResultSet rs = tb.getDtlBarang(kdbarang);
-                try {
-                    while (rs.next()){
-                        
-                    }
-                    
-                    //itung total harga
-                    int tot_harga = 0;
-                    for(int i = 0; i < tblJual.getRowCount();i++){
-                        tot_harga += Integer.parseInt(tblJual.getValueAt(i, 4).toString());
-                    }
-                    txtTotal.setText(""+tot_harga);
-                    
-                } catch (SQLException ex) {
-                    Logger.getLogger(menu.class.getName()).log(Level.SEVERE, null, ex);
-                }
-        clearjumlh();
+            tblJual.addRow(new Object[]{txtKodeBarang.getText(), boxNmBarang.getSelectedItem().toString(), txtHarga.getText(), txtJumlah.getText(), subtotal});
+
+                        //itung total harga
+            int tot_harga = 0;
+            for(int i = 0; i < tblJual.getRowCount();i++){
+                tot_harga += Integer.parseInt(tblJual.getValueAt(i, 4).toString());
+            }
+            txtTotal.setText(""+tot_harga);
+
+            clearjumlh();
+        }
     }//GEN-LAST:event_txtJumlahActionPerformed
 
     private void txtKodeBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKodeBarangActionPerformed
@@ -2819,6 +2853,11 @@ public class menu extends javax.swing.JFrame {
         txtHargaJual.setText("" + hargajual);
     }//GEN-LAST:event_txtHargaBeliActionPerformed
 
+    private void btnHAPUS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHAPUS1ActionPerformed
+        // TODO add your handling code here:
+        clearbrg();
+    }//GEN-LAST:event_btnHAPUS1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2874,15 +2913,15 @@ public class menu extends javax.swing.JFrame {
     public void KosongkanFormSP() {
         namaSPL_depan.setText("");
         namaSPL_blk.setText("");
-        Alamat.setText("");
+        Alamat1.setText("");
         no_hp.setText("");
         kode_supplier.setText("");
     }
     private void readDataSupplier() {
         DefaultTableModel TblSupplier = new DefaultTableModel();
 
-        TblSupplier.addColumn("kode_supplier");
-        TblSupplier.addColumn("namaSPL_depan");
+        TblSupplier.addColumn("Kode Supplier");
+        TblSupplier.addColumn("Nama Supplier");
         TblSupplier.addColumn("namaSPL_blk");
         TblSupplier.addColumn("no_hp");
         Tb_Supplier.setModel(TblSupplier);
@@ -2912,10 +2951,10 @@ public class menu extends javax.swing.JFrame {
     /** PANEL BARANG NI BOS*/
     public void clearbrg(){
         txtkodebarang.setText("");
-        txtkodebarang.setText("");
-        txtkodebarang.setText("");
-        txtkodebarang.setText("");
-        txtkodebarang.setText("");
+        txtnamabarang.setText("");
+        txtstok.setText("");
+        txthargabeli.setText("");
+        txthargajual.setText("");
     }
     public void showTableBarang(){
         tblBrg = new DefaultTableModel(new String[]{"Kode Barang", "Nama Barang", "Harga Beli", "Harga Jual", "Stok"},0);
@@ -3002,6 +3041,7 @@ public class menu extends javax.swing.JFrame {
         txtNoBeli.setText("");
         txtKodeSupplier.setText("");
         txtNamaSupplier.setText("");
+        clearjumlhbrg();
     }
     
         //PANEL PENJUALAN NI BOSS//
@@ -3016,6 +3056,7 @@ public class menu extends javax.swing.JFrame {
         txtTotal.setEditable(false);
         txtHarga.setEditable(false);
         txtKembalian.setEditable(false);
+        txtTime.setEditable(false);
         tblPenjualan.setModel(new DefaultTableModel(new String[]{"Kode Barang", "Nama Barang", "harga", "Jumlah", "Subtotal"},0));
 //        setExtendedState(JFrame.MAXIMIZED_BOTH);
         dgclock();
@@ -3053,6 +3094,7 @@ public class menu extends javax.swing.JFrame {
         txtUang.setText("");
         txtNoFaktur.setText("");
         boxNmBarang.setSelectedItem(" ");
+        clearjumlh();
     }
     
     public void boxbrg(){
@@ -3192,6 +3234,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JPanel btnBarang;
     private javax.swing.JButton btnEDIT;
     private javax.swing.JButton btnHAPUS;
+    private javax.swing.JButton btnHAPUS1;
     private javax.swing.JPanel btnHome;
     private javax.swing.JPanel btnLaporan;
     private javax.swing.JPanel btnPembelian;
