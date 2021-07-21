@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="360" pageHeight="720" columnWidth="320" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="df4f87b7-3279-4906-bd7f-5ed192b0f320">
+	<property name="ireport.zoom" value="3.138428376721004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="112"/>
+	<parameter name="nobeli" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     pembelian.`no_pembelian` AS pembelian_no_pembelian,
+     pembelian.`no_beli` AS pembelian_no_beli,
+     pembelian.`kode_barang` AS pembelian_kode_barang,
+     pembelian.`jumlah` AS pembelian_jumlah,
+     pembelian.`tot_harga` AS pembelian_tot_harga,
+     barang.`kode_barang` AS barang_kode_barang,
+     barang.`nama_barang` AS barang_nama_barang,
+     barang.`harga_jual` AS barang_harga_jual,
+     barang.`harga_beli` AS barang_harga_beli,
+     barang.`stok` AS barang_stok,
+     dtl_pembelian.`no_beli` AS dtl_pembelian_no_beli,
+     dtl_pembelian.`username` AS dtl_pembelian_username,
+     dtl_pembelian.`kode_supplier` AS dtl_pembelian_kode_supplier,
+     dtl_pembelian.`tot_harga` AS dtl_pembelian_tot_harga,
+     dtl_pembelian.`tanggal` AS dtl_pembelian_tanggal,
+     dtl_pembelian.`datetime` AS dtl_pembelian_datetime,
+     supplier.`kode_supplier` AS supplier_kode_supplier,
+     supplier.`namaSPL_depan` AS supplier_namaSPL_depan,
+     supplier.`namaSPL_blk` AS supplier_namaSPL_blk,
+     supplier.`Alamat` AS supplier_Alamat,
+     supplier.`no_hp` AS supplier_no_hp,
+     penjual.`username` AS penjual_username,
+     penjual.`nama_depan` AS penjual_nama_depan,
+     penjual.`nama_belakang` AS penjual_nama_belakang,
+     penjual.`alamat` AS penjual_alamat,
+     penjual.`no_hp` AS penjual_no_hp,
+     penjual.`password` AS penjual_password,
+     penjual.`level` AS penjual_level
+FROM
+     `barang` barang INNER JOIN `pembelian` pembelian ON barang.`kode_barang` = pembelian.`kode_barang`
+     INNER JOIN `dtl_pembelian` dtl_pembelian ON pembelian.`no_beli` = dtl_pembelian.`no_beli`
+     INNER JOIN `supplier` supplier ON dtl_pembelian.`kode_supplier` = supplier.`kode_supplier`
+     INNER JOIN `penjual` penjual ON dtl_pembelian.`username` = penjual.`username`
+WHERE
+     dtl_pembelian.`no_beli` = $P{nobeli}]]>
+	</queryString>
+	<field name="pembelian_no_pembelian" class="java.lang.Integer"/>
+	<field name="pembelian_no_beli" class="java.lang.String"/>
+	<field name="pembelian_kode_barang" class="java.lang.String"/>
+	<field name="pembelian_jumlah" class="java.lang.Integer"/>
+	<field name="pembelian_tot_harga" class="java.lang.Integer"/>
+	<field name="barang_kode_barang" class="java.lang.String"/>
+	<field name="barang_nama_barang" class="java.lang.String"/>
+	<field name="barang_harga_jual" class="java.lang.Integer"/>
+	<field name="barang_harga_beli" class="java.lang.Integer"/>
+	<field name="barang_stok" class="java.lang.Integer"/>
+	<field name="dtl_pembelian_no_beli" class="java.lang.String"/>
+	<field name="dtl_pembelian_username" class="java.lang.String"/>
+	<field name="dtl_pembelian_kode_supplier" class="java.lang.String"/>
+	<field name="dtl_pembelian_tot_harga" class="java.lang.Integer"/>
+	<field name="dtl_pembelian_tanggal" class="java.sql.Date"/>
+	<field name="dtl_pembelian_datetime" class="java.sql.Time"/>
+	<field name="supplier_kode_supplier" class="java.lang.String"/>
+	<field name="supplier_namaSPL_depan" class="java.lang.String"/>
+	<field name="supplier_namaSPL_blk" class="java.lang.String"/>
+	<field name="supplier_Alamat" class="java.lang.String"/>
+	<field name="supplier_no_hp" class="java.lang.String"/>
+	<field name="penjual_username" class="java.lang.String"/>
+	<field name="penjual_nama_depan" class="java.lang.String"/>
+	<field name="penjual_nama_belakang" class="java.lang.String"/>
+	<field name="penjual_alamat" class="java.lang.String"/>
+	<field name="penjual_no_hp" class="java.lang.String"/>
+	<field name="penjual_password" class="java.lang.String"/>
+	<field name="penjual_level" class="java.lang.String"/>
+	<group name="pembelian">
+		<groupFooter>
+			<band height="32">
+				<textField>
+					<reportElement uuid="27b3fac0-69ab-4fae-bcaa-769015051cc7" x="263" y="13" width="57" height="14"/>
+					<textElement>
+						<font fontName="Monospaced" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dtl_pembelian_tot_harga}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="19f5e8a7-40a5-4506-ad23-4cf21f159bf3" x="2" y="8" width="318" height="1"/>
+					<graphicElement>
+						<pen lineWidth="1.25" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="195" y="13" width="47" height="14"/>
+					<textElement>
+						<font fontName="Monospaced" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Total	: ]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="111" y="7" width="102" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Natural Shop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="105" y="21" width="115" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Brantas no. 45]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="85" y="35" width="152" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jember, Jawa Timur]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="94" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1490a934-0eac-4604-9cda-4934d64ddb2a" x="53" y="70" width="58" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pembelian_no_beli}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="2" y="70" width="51" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No Beli    :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="19f5e8a7-40a5-4506-ad23-4cf21f159bf3" x="2" y="0" width="318" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="2" y="40" width="93" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Pelayan	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="2" y="54" width="93" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Supplier	:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b4ee5d14-437b-4e2d-99d4-dcd9b7ce79a7" x="95" y="40" width="77" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{penjual_nama_depan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1c2b8ed0-4797-4e2b-b2f7-4d4d881cac4b" x="95" y="54" width="33" height="14"/>
+				<textElement textAlignment="Right">
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplier_namaSPL_depan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="285caee0-3375-4ec9-8ad0-d0a7f9e21e6f" x="133" y="54" width="124" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplier_namaSPL_blk}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="2" y="12" width="93" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="2" y="26" width="93" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jam		:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d23c248c-be0f-46b3-bcd3-6e5d77b8572f" x="95" y="12" width="100" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtl_pembelian_tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0a149631-a75c-46ed-975d-1614cb5ee1cb" x="95" y="26" width="100" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtl_pembelian_datetime}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="19f5e8a7-40a5-4506-ad23-4cf21f159bf3" x="2" y="93" width="318" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1ae522f0-3ee1-4df8-909d-ed20f5e39543" x="2" y="6" width="120" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ee526e69-6e43-4049-9be2-5a3de577fede" x="122" y="6" width="81" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Harga Beli]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ce831ca7-cfb5-4a3a-b6c2-b465f6069bf5" x="263" y="6" width="57" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Subtotal]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="19f5e8a7-40a5-4506-ad23-4cf21f159bf3" x="2" y="22" width="318" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="204" y="6" width="38" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="96b9b7a3-847c-483c-ab1a-ea03f2bedb80" x="2" y="5" width="109" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barang_nama_barang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="89dc762c-620b-4608-9c7b-d5fe18693e47" x="263" y="5" width="57" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pembelian_tot_harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="edb99580-c6ef-41d6-83b5-54ad9b84196d" x="128" y="5" width="73" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{barang_harga_beli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c40fc63f-29f4-485c-9a77-25ce8854a478" x="204" y="5" width="38" height="14"/>
+				<textElement>
+					<font fontName="Monospaced" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pembelian_jumlah}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="da365317-e0fc-44da-8201-57bede981ef1" x="113" y="9" width="102" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[~ Terima Kasih ~]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

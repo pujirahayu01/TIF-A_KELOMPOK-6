@@ -136,6 +136,15 @@ public class menu extends javax.swing.JFrame {
         btnPenjualan1 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
+        btnPenjualan2 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        btnSupplier1 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        btnPembelian1 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
         adminPanel = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         txtcari = new javax.swing.JTextField();
@@ -165,6 +174,7 @@ public class menu extends javax.swing.JFrame {
         jPanel21 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
         jPanel23 = new RoundedPanel(50, new java.awt.Color(255, 255, 255));
         jLabel48 = new javax.swing.JLabel();
+        Hapus2 = new javax.swing.JButton();
         barangPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblBrg = new javax.swing.JTable();
@@ -681,21 +691,125 @@ public class menu extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        btnPenjualan2.setBackground(new java.awt.Color(241, 245, 246));
+        btnPenjualan2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPenjualan2MouseClicked(evt);
+            }
+        });
+
+        jLabel53.setFont(new java.awt.Font("STXihei", 0, 18)); // NOI18N
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("Transaksi Penjualan");
+
+        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/penjualan.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnPenjualan2Layout = new javax.swing.GroupLayout(btnPenjualan2);
+        btnPenjualan2.setLayout(btnPenjualan2Layout);
+        btnPenjualan2Layout.setHorizontalGroup(
+            btnPenjualan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(btnPenjualan2Layout.createSequentialGroup()
+                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 18, Short.MAX_VALUE))
+        );
+        btnPenjualan2Layout.setVerticalGroup(
+            btnPenjualan2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnPenjualan2Layout.createSequentialGroup()
+                .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+
+        btnSupplier1.setBackground(new java.awt.Color(241, 245, 246));
+        btnSupplier1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSupplier1MouseClicked(evt);
+            }
+        });
+
+        jLabel55.setFont(new java.awt.Font("STXihei", 0, 18)); // NOI18N
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("Supplier");
+
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/supplier.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnSupplier1Layout = new javax.swing.GroupLayout(btnSupplier1);
+        btnSupplier1.setLayout(btnSupplier1Layout);
+        btnSupplier1Layout.setHorizontalGroup(
+            btnSupplier1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+        );
+        btnSupplier1Layout.setVerticalGroup(
+            btnSupplier1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnSupplier1Layout.createSequentialGroup()
+                .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+
+        btnPembelian1.setBackground(new java.awt.Color(241, 245, 246));
+        btnPembelian1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPembelian1MouseClicked(evt);
+            }
+        });
+
+        jLabel57.setFont(new java.awt.Font("STXihei", 0, 18)); // NOI18N
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("Transaksi Pembelian");
+
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/pembelian.png"))); // NOI18N
+
+        javax.swing.GroupLayout btnPembelian1Layout = new javax.swing.GroupLayout(btnPembelian1);
+        btnPembelian1.setLayout(btnPembelian1Layout);
+        btnPembelian1Layout.setHorizontalGroup(
+            btnPembelian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel58, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+        );
+        btnPembelian1Layout.setVerticalGroup(
+            btnPembelian1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnPembelian1Layout.createSequentialGroup()
+                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+
         javax.swing.GroupLayout laporanPanelLayout = new javax.swing.GroupLayout(laporanPanel);
         laporanPanel.setLayout(laporanPanelLayout);
         laporanPanelLayout.setHorizontalGroup(
             laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(laporanPanelLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(btnPenjualan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(962, Short.MAX_VALUE))
+                .addGap(63, 63, 63)
+                .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnPenjualan2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPenjualan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSupplier1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPembelian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(596, Short.MAX_VALUE))
         );
         laporanPanelLayout.setVerticalGroup(
             laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(laporanPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(btnPenjualan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(501, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laporanPanelLayout.createSequentialGroup()
+                .addContainerGap(81, Short.MAX_VALUE)
+                .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPenjualan1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSupplier1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPenjualan2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPembelian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(76, 76, 76))
         );
 
         main.add(laporanPanel, "card3");
@@ -999,7 +1113,9 @@ public class menu extends javax.swing.JFrame {
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1011,6 +1127,21 @@ public class menu extends javax.swing.JFrame {
 
         adminPanel.add(jPanel23);
         jPanel23.setBounds(60, 30, 1180, 90);
+
+        Hapus2.setBackground(new java.awt.Color(0, 139, 128));
+        Hapus2.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
+        Hapus2.setForeground(new java.awt.Color(255, 255, 255));
+        Hapus2.setText("Cetak Laporan");
+        Hapus2.setOpaque(false);
+        Hapus2.setRequestFocusEnabled(false);
+        Hapus2.setRolloverEnabled(false);
+        Hapus2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Hapus2ActionPerformed(evt);
+            }
+        });
+        adminPanel.add(Hapus2);
+        Hapus2.setBounds(1050, 300, 140, 31);
 
         main.add(adminPanel, "card4");
 
@@ -1689,7 +1820,6 @@ public class menu extends javax.swing.JFrame {
         txtTotal.setBackground(new java.awt.Color(0, 139, 128));
         txtTotal.setFont(new java.awt.Font("STXihei", 0, 48)); // NOI18N
         txtTotal.setForeground(new java.awt.Color(255, 255, 255));
-        txtTotal.setText("123123123");
         txtTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTotalActionPerformed(evt);
@@ -2569,7 +2699,7 @@ public class menu extends javax.swing.JFrame {
         ResultSet rs = tb.supplier(kdsupplier);
         try {
             if(rs.next()){
-                txtNamaSupplier.setText(rs.getString("namaSPL_depan"));
+                txtNamaSupplier.setText(rs.getString("namaSPL_depan") + " " + rs.getString("namaSPL_blk"));
             } else {
                 JOptionPane.showMessageDialog(null, "Supplier tidak ditemukan! \nSilahkan input data Supplier terlebih dahulu!");
                 txtNamaSupplier.setText("");
@@ -2631,7 +2761,7 @@ public class menu extends javax.swing.JFrame {
             ResultSet rs = tb.getDtlBarang(kdbarang);
             try {
                 if(rs.next()){
-                    JOptionPane.showMessageDialog(null, "Barang sudah ada");
+//                    JOptionPane.showMessageDialog(null, "Barang sudah ada");
                     tb.insertpb(nobeli, kdbarang, jumlah, subtotal);
 
                     ResultSet rst = tb.getDtlBarang(kdbarang);
@@ -2645,7 +2775,7 @@ public class menu extends javax.swing.JFrame {
                         Logger.getLogger(menu.class.getName()).log(Level.SEVERE, null, ex);
                     } 
                 } else {
-                    JOptionPane.showMessageDialog(null, "Barang tidak ada");
+//                    JOptionPane.showMessageDialog(null, "Barang tidak ada");
                     tb.insertbrg(kdbarang, nmbarang, hargabeli, hargajual, stok);
                     tb.insertpb(nobeli, kdbarang, jumlah, subtotal);
                 }
@@ -2653,6 +2783,19 @@ public class menu extends javax.swing.JFrame {
                 Logger.getLogger(menu.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        HashMap m = new HashMap();
+            m.put("nobeli", nobeli);
+
+            try {
+                JasperDesign jd = JRXmlLoader.load("src\\report\\notaPembelian.jrxml");
+                JasperReport jr = JasperCompileManager.compileReport(jd);
+                JasperPrint jp = JasperFillManager.fillReport(jr, m, conn);
+                JasperViewer.viewReport(jp, false);
+
+            } catch (JRException ex) {
+                Logger.getLogger(menu.class.getName()).log(Level.SEVERE, null, ex);
+            }
         
         JOptionPane.showMessageDialog(null, "Sukses!");
         clearselesaibrg();
@@ -2708,10 +2851,10 @@ public class menu extends javax.swing.JFrame {
         }
         
         HashMap m = new HashMap();
-        m.put("nonota", nofaktur);
+        m.put("nofaktur", nofaktur);
         
         try {
-            JasperDesign jd = JRXmlLoader.load("src\\report\\nota.jrxml");
+            JasperDesign jd = JRXmlLoader.load("src\\report\\notaPenjualan.jrxml");
             JasperReport jr = JasperCompileManager.compileReport(jd);
             JasperPrint jp = JasperFillManager.fillReport(jr, m, conn);
             JasperViewer.viewReport(jp, false);
@@ -2857,6 +3000,50 @@ public class menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         clearbrg();
     }//GEN-LAST:event_btnHAPUS1ActionPerformed
+
+    private void btnPenjualan2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPenjualan2MouseClicked
+        // TODO add your handling code here:
+        try {
+            String file = "src/report/reportPenjualan.jasper";
+            JasperPrint jp = JasperFillManager.fillReport(file, null, conn);
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnPenjualan2MouseClicked
+
+    private void btnSupplier1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSupplier1MouseClicked
+        // TODO add your handling code here:
+         try {
+            String file = "src/report/reportSupplier.jasper";
+            JasperPrint jp = JasperFillManager.fillReport(file, null, conn);
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnSupplier1MouseClicked
+
+    private void btnPembelian1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPembelian1MouseClicked
+        // TODO add your handling code here:
+        try {
+            String file = "src/report/reportPembelian.jasper";
+            JasperPrint jp = JasperFillManager.fillReport(file, null, conn);
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btnPembelian1MouseClicked
+
+    private void Hapus2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hapus2ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String file = "src/report/reportAdmin.jasper";
+            JasperPrint jp = JasperFillManager.fillReport(file, null, conn);
+            JasperViewer.viewReport(jp, false);
+        } catch (JRException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_Hapus2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3034,6 +3221,7 @@ public class menu extends javax.swing.JFrame {
         txtHargaBeli.setText("");
         txtHargaJual.setText("");
         txtJumlah1.setText("");
+        txtNmBarang.setText("");
     }
     
     public void clearselesaibrg(){
@@ -3041,6 +3229,7 @@ public class menu extends javax.swing.JFrame {
         txtNoBeli.setText("");
         txtKodeSupplier.setText("");
         txtNamaSupplier.setText("");
+        txtNmBarang.setText("");
         clearjumlhbrg();
     }
     
@@ -3214,6 +3403,7 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JButton Edit1;
     private javax.swing.JButton Hapus;
     private javax.swing.JButton Hapus1;
+    private javax.swing.JButton Hapus2;
     private javax.swing.JTextField ID_admin;
     private javax.swing.JTextField Nm_Blkng;
     private javax.swing.JTextField Nm_depan;
@@ -3238,9 +3428,12 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JPanel btnHome;
     private javax.swing.JPanel btnLaporan;
     private javax.swing.JPanel btnPembelian;
+    private javax.swing.JPanel btnPembelian1;
     private javax.swing.JPanel btnPenjualan;
     private javax.swing.JPanel btnPenjualan1;
+    private javax.swing.JPanel btnPenjualan2;
     private javax.swing.JPanel btnSupplier;
+    private javax.swing.JPanel btnSupplier1;
     private javax.swing.JButton btnTAMBAH;
     private javax.swing.JPanel homePanel;
     private javax.swing.JButton jButton10;
@@ -3293,6 +3486,12 @@ public class menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
