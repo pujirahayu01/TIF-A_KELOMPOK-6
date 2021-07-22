@@ -725,7 +725,7 @@ public class menu extends javax.swing.JFrame {
 
         jLabel53.setFont(new java.awt.Font("STXihei", 0, 18)); // NOI18N
         jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel53.setText("Transaksi Penjualan");
+        jLabel53.setText("Laporan Penjualan");
 
         jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/penjualan.png"))); // NOI18N
@@ -787,7 +787,7 @@ public class menu extends javax.swing.JFrame {
 
         jLabel57.setFont(new java.awt.Font("STXihei", 0, 18)); // NOI18N
         jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel57.setText("Transaksi Pembelian");
+        jLabel57.setText("Laporan Pembelian");
 
         jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/pembelian.png"))); // NOI18N
@@ -2442,6 +2442,12 @@ public class menu extends javax.swing.JFrame {
 
     private void refreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshActionPerformed
         // TODO add your handling code here:
+        ID_admin.setText("");
+        Nm_depan.setText("");
+        Nm_Blkng.setText("");
+        password.setText("");
+        Alamat.setText("");
+        Nmr_hp.setText("");
     }//GEN-LAST:event_refreshActionPerformed
 
     private void Tmbh_dataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tmbh_dataActionPerformed
@@ -2563,6 +2569,11 @@ public class menu extends javax.swing.JFrame {
 
     private void refresh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refresh1ActionPerformed
         // TODO add your handling code here:
+        kode_supplier.setText("");
+        namaSPL_depan.setText("");
+        namaSPL_blk.setText("");
+        Alamat1.setText("");
+        no_hp.setText("");
     }//GEN-LAST:event_refresh1ActionPerformed
 
     private void Tmbh_data1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tmbh_data1ActionPerformed
