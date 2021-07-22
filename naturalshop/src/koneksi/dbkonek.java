@@ -61,6 +61,7 @@ public class dbkonek {
             pst.setInt(2, hrgjual);
             pst.setInt(4, stok);
             pst.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data berhasil di Edit!");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }

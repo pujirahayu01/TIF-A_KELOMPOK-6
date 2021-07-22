@@ -1482,7 +1482,7 @@ public class menu extends javax.swing.JFrame {
         Edit1.setBackground(new java.awt.Color(0, 139, 128));
         Edit1.setFont(new java.awt.Font("STXihei", 0, 14)); // NOI18N
         Edit1.setForeground(new java.awt.Color(255, 255, 255));
-        Edit1.setText("Edit Data");
+        Edit1.setText("Update");
         Edit1.setOpaque(false);
         Edit1.setRequestFocusEnabled(false);
         Edit1.setRolloverEnabled(false);

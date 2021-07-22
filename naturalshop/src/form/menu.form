@@ -2149,7 +2149,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Edit Data"/>
+                    <Property name="text" type="java.lang.String" value="Update"/>
                     <Property name="opaque" type="boolean" value="false"/>
                     <Property name="requestFocusEnabled" type="boolean" value="false"/>
                     <Property name="rolloverEnabled" type="boolean" value="false"/>
